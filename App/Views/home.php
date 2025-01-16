@@ -12,6 +12,7 @@
     
     <div class="container">
     <h1>cheguei na home</h1>
+    <h1><?php echo "Ola, ". $_SESSION['email']?>    
     </div>
 </body>
 </html>

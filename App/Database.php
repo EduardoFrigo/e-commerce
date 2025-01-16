@@ -1,9 +1,9 @@
 <?php
 class Database {
-    private static $host = 'vidrac_hdeluca.vpshost9220.mysql.dbaas.com.br';
-    private static $db   = 'vidrac_hdeluca';
-    private static $user = 'vidrac_hdeluca';
-    private static $pass = 'vcd@Teia#2025!';
+    private static $host = 'localhost';
+    private static $db   = 'frame';
+    private static $user = 'root';
+    private static $pass = '';
     private static $charset = 'utf8mb4';
     private static $pdo = null;
 

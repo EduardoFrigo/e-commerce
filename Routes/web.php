@@ -3,7 +3,7 @@
 
 //cria caminho absoluto;
 $path = realpath(__DIR__ . '/../App/') . DIRECTORY_SEPARATOR;
-
+session_start();
 
 //carrega os arquivos a partir disso;
 
@@ -32,7 +32,11 @@ Router::get('/', [HomeController::class, 'index']);
 Router::get('/sobre', [HomeController::class, 'sobre']);
 
 Router::get('/login' , [UserController::class, 'login']);
+Router::post('/login' , [UserController::class, 'processLogUser']);
+
 Router::get('/createLogin' , [UserController::class, 'createLogin']);
+Router::post('/createLogin' , [UserController::class, 'processCreateLog']);
+
 
 Router::get('/session', function () {
     var_dump($_SESSION);
