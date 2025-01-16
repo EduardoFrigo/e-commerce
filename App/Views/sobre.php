@@ -1,6 +1,4 @@
 <?php include_once 'partials/nav.php';?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    
+
     <div class="container">
-    <h1>cheguei na home</h1>
+    <h1>Olá, esse é um modelo de arquitetura de apps web que estou criando! Você esta na página: sobre.</h1>
     </div>
 </body>
 </html>

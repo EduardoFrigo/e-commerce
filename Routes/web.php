@@ -9,11 +9,12 @@ $path = realpath(__DIR__ . '/../App/') . DIRECTORY_SEPARATOR;
 
 $arquivos = [
     'Router.php',
-    'Controller/HomeController.php'
+    'Controller/HomeController.php',
+    'Controller/UserController.php'
 ];
 
 
-//usa foreach para carregar e checar os arquivos
+//usa foreach para carregar e checar os arquivos, facilitando o debug de rota
 foreach ($arquivos as $arquivo) {
     if (!file_exists($path . $arquivo)) {
         die("NAO ENCONTREI ESSE AQUI AMIGAO: " . $path . $arquivo);
@@ -28,11 +29,10 @@ foreach ($arquivos as $arquivo) {
 
 // Definição das rotas
 Router::get('/', [HomeController::class, 'index']);
-Router::get('/sobre', function () {
-    echo "Página Sobre Nós";
-});
+Router::get('/sobre', [HomeController::class, 'sobre']);
 
-
+Router::get('/login' , [UserController::class, 'login']);
+Router::get('/createLogin' , [UserController::class, 'createLogin']);
 
 Router::get('/session', function () {
     var_dump($_SESSION);

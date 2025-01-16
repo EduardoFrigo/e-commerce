@@ -1,0 +1,43 @@
+a ideia desse projeto é criar um framework que usarei sempre em casos de criação de e-commerce, deixando todas as apis preparadas,
+banco de dados e funcionalidades de login.
+
+no controle de banco de dados a regra é simples.
+
+para cada tabela que sera alterada, um model e um controller com crud para elas.
+
+usarei como gerenciador de dependencias o Composer, usando phpoffice e outras funcionalidades para gerar pdf (para nota fiscal) e
+extracao do banco de dados para Excel, detalhe que gosto de entregar para maior facilidade de gerenciamento por parte do contratante.
+
+e para framework front-end usarei o bootstrap 5.3;
+
+em resumo, as tecnologias usadas serao
+
+* Composer;
+* Bootstrap;
+* MySql;
+* PHP;
+* Js;
+* HTML;
+* CSS;
+
+a tarefa principal é fazer o chão de um e-commerce, sendo isso
+
+* finalizar compras, gerenciamento de carrinho e calculo de frete, guardar os dados da venda na tabela de vendas;
+* gerenciamento DINAMICO das paginas de compra, sendo todas setadas com consultas de banco de dados por meio do prodController;
+* tela de admin para cadastro de produtos, os mais vendidos, os menos vendidos e etc;
+* a pesquisa da navbar deve funcionar de acordo com a pagina que o cliente esta, ou seja, se for uma farmacia e ele estiver 
+  na tela de antibióticos, se ele fizer a pesquisa, ele pesquisará por antibioticos, e caso queira pesquisar sobre todos os remédios
+  poderá ser feito na home (ou index, chame do que quiser);
+* TODAS AS REQUISICOES PRECISAM SER PASSADAS PELO CONTROLLER, E DEPOIS AO MODEL. EXTREMAMENTE PROIBIDO CONSULTA AO BANCO DE DADOS 
+  NA VIEW (SUJEITO A PAULADA!!!!!!);
+
+o banco de dados necessita ter as seguintes tabelas
+
+admin
+user 
+venda 
+prod 
+categ_prod (pra melhor controle dos produtos, facilitando tambem na hora da consulta dos mais vendidos por categoria);
+
+como se trata de um e-commerce e nao de um site de administração, a tabela PDV se torna inútil, considerando que em si isso seria 
+um grande pdv
