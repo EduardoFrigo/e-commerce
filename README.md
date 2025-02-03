@@ -33,3 +33,5 @@ Dentro da pasta **public**, está o arquivo `index.php`, que irá despachar as r
 - **PHP**
 - **HTML**
 - **CSS**
+- **MySQL**
+- **Composer**
