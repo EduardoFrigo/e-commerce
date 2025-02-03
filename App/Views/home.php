@@ -12,7 +12,10 @@
     
     <div class="container">
     <h1>cheguei na home</h1>
-    <h1><?php echo "Ola, ". $_SESSION['email']?>    
+    <h1><?php 
+    
+    if(isset($_SESSION['email'])){echo "Ola, ". $_SESSION['email'];};
+    ?>    
     </div>
 </body>
 </html>

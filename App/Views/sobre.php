@@ -11,5 +11,7 @@
     <div class="container">
     <h1>Olá, esse é um modelo de arquitetura de apps web que estou criando! Você esta na página: sobre.</h1>
     </div>
+    <script src="<?= asset('js/teste.js'); ?>"></script>
+    
 </body>
 </html>

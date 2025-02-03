@@ -4,6 +4,16 @@ RewriteEngine On
 # Define a base para as URLs (ajustado para o diretório correto)
 RewriteBase /framework/public
 
+# Bloqueia acesso a arquivos sensíveis
+<FilesMatch "\.(env|htaccess|ini|log|sh|sql)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Redireciona HTTP para HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 # Evita reescrever para o próprio index.php
 RewriteRule ^index\.php$ - [L]
 
@@ -13,3 +23,13 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 # Redireciona todas as requisições para o index.php
 RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Redireciona URLs inválidas para uma página de erro 404
+ErrorDocument 404 /errors/404.php
+
+# Desativa o caching para arquivos dinâmicos
+<FilesMatch "\.(php)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</FilesMatch>
