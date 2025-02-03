@@ -1,0 +1,20 @@
+.form {
+    max-width: 500px;
+    width: 100%;
+    border: 1px solid #afafaf;  
+    border-radius: 25px;  
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave ao redor do formulário */
+}
+
+
+
+
+
+.border-1px{
+    border: 1px black solid;
+    border-radius: 25px;
+
+
+
+}

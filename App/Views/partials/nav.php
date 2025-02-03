@@ -1,7 +1,6 @@
 <?php
-use App\Helpers\ViewHelper;  // Adicione esta linha no topo do arquivo
+use App\Helpers\ViewHelper;  
 
-// Seu código continuará funcionando normalmente
 ?>
 
 
@@ -14,12 +13,14 @@ use App\Helpers\ViewHelper;  // Adicione esta linha no topo do arquivo
     <link href="<?= ViewHelper::asset('vendors/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <script src="<?= ViewHelper::asset('vendors/bootstrap/js/bootstrap.min.js')?>"></script>
     <script src="<?= ViewHelper::asset('vendors/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
+    <link href="<?= ViewHelper::asset('css/cssform.css');?>" rel="stylesheet">
+    <link href="<?= ViewHelper::asset('css/cssgeral.css');?>" rel="stylesheet">
    </head>
 <body>
-    <div class="container">
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">E-Commerce</a>
+    <div class="container-fluid" >
+<nav class="navbar navbar-expand-lg border-bottom">
+  <div class="container">
+    <a class="navbar-brand" href="/">Window Worker</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -29,11 +30,13 @@ use App\Helpers\ViewHelper;  // Adicione esta linha no topo do arquivo
           <a class="nav-link active" aria-current="page" href="sobre">Sobre</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <?php
             
             if(isset($_SESSION['email'])){
               echo "Bem vindo, " . $_SESSION['email'];
+            }else{
+              echo "faça o login";
             }
             
             
@@ -52,7 +55,9 @@ use App\Helpers\ViewHelper;  // Adicione esta linha no topo do arquivo
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
+
   </div>
+
 </nav>
 </div>
 </body>

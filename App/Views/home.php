@@ -1,9 +1,3 @@
-<?php
-
-// define('ENVIRONMENT', 'development');
-    use App\Helpers\ViewHelper;
-    include ViewHelper::userView('partials/nav.php');
-    ?>
 
     <!DOCTYPE html>
     <html lang="en">
@@ -15,7 +9,9 @@
     <body>
         
         <div class="container">
-        <h1>cheguei na home</h1>
+        <h1 class="text-center">Bem vindo ao Window Worker.</h1>
+        <p class="text-center">O objetivo desse framework é fazer com que a produção de sistemas web utilizando o php seja mais rapida, personalizável e ágil, 
+            usando das boas práticas de produção de código, arquitetura MVC, PHPOO e outras várias tecnologias para me auxiliar no processo</p>
         <h1><?php 
         
         if(isset($_SESSION['email'])){echo "Ola, ". $_SESSION['email'];};
