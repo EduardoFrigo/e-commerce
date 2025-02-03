@@ -1,9 +1,19 @@
+<?php
+use App\Helpers\ViewHelper;  // Adicione esta linha no topo do arquivo
+
+// Seu código continuará funcionando normalmente
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>e-commerce do dudu</title>
+    <link href="<?= ViewHelper::asset('vendors/bootstrap/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <script src="<?= ViewHelper::asset('vendors/bootstrap/js/bootstrap.min.js')?>"></script>
+    <script src="<?= ViewHelper::asset('vendors/bootstrap/js/bootstrap.bundle.min.js')?>"></script>
    </head>
 <body>
     <div class="container">
